@@ -5,41 +5,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Michał Mazur</title>
+
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            color: #fff;
+            font-family: 'Nunito Semibold';
+            text-align: center;
+        }
+
+        #content{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+            grid-gap: 10px;
+            max-width: 960px;
+            margin: 0 auto;
+            grid-template-areas:
+                "header header header header"
+                "footer footer footer footer"
+                "main main main main"
+                "main main main main";
+        }
+        /* desktop grid */
+        @media screen and (min-width: 760px){
+    		#content{
+    			display: grid;
+    			grid-template-columns: repeat(4, 1fr);
+    			grid-auto-rows: minmax(100px, auto);
+    			grid-gap: 10px;
+    			max-width: 960px;
+    			margin: 0 auto;
+                grid-template-areas:
+                    "header header header header"
+                    "main main main main"
+                    "main main main main"
+                    "footer footer footer footer"
+    		}
+        }
+		#content > *{
+			
+            background: #3bbced;
+			padding: 30px;
+		}
+        header{
+            grid-area: header;
+        }
+        main{
+            grid-area: main;
+        }
+        footer{
+            grid-area: footer;
+          
+        }
+        .social-network{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        .lang{
+            display: flex;
+            justify-content: flex-end;
+            align-content: flex-start;
+        }
+        .hero{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .section-one{
+            background: red;
+            padding: 30px;
+        }
+        .section-two{
+            background: green;
+            padding: 30px;
+        }
+        .section-three{
+            background: grey;
+            padding: 30px;
+        }
+    </style>
 </head>
 <body>
+    <div id="content">
     <header>
         <div class="hero">
             <nav>
-                <div class="social-network"></div>
-                <div class="lang"></div>
+                <div class="social-network">
+                    <div><a href="" class="github">Github</a></div>
+                    <div><a href="" class="linkedin">LinkedIn</a></div>
+                </div>
+                <div class="lang">
+                    <div><a href="" class="pl">pl</a></div>
+                    <div><a href="" class="en">en</a></div>
+                </div>
+                <h1>Welcome to my website!</h1>
                 <div class="logo"></div>
                 <div class="menu">
                     <div class="nav-links-container">
                         <div class="navlink-container">
-                            <a href="" class="navlink link">home</a>
+                            <a href="" class="navlink-link">home</a>
                         </div>
                         <div class="navlink-container">
-                                <a href="" class="navlink link">about</a>
+                                <a href="" class="navlink-link">about</a>
                         </div>
                         <div class="navlink-container">
-                                <a href="" class="navlink link">experience</a>
+                                <a href="" class="navlink-link">experience</a>
                         </div>
                         <div class="navlink-container">
-                                <a href="" class="navlink link">hobby</a>
+                                <a href="" class="navlink-link">hobby</a>
                         </div>
                         <div class="navlink-container">
-                                <a href="" class="navlink link">contact</a>
+                                <a href="" class="navlink-link">contact</a>
                         </div>
-                    </div>
+                    </ul>
                 </div>
             </nav>
         </div>
     </header>
     <main>
-        <div class="section-one"></div>
-        <div class="section-two"></div>
-        <div class="section-three"></div>
-        <div class="section-four"></div>
+        <div class="section-one">This will be a first section. Here you'll find some information about me.</div>
+        <hr>
+        <div class="section-two">Section no 2 will be about my experience.</div>
+        <hr>
+        <div class="section-three">Section no 3 will be about my hobbys.</div>
     </main>
     <footer>
         <div class="briefing">
@@ -51,5 +146,6 @@
             <div class="copyright"></div>
         </div>
     </footer>
+    </div>
 </body>
 </html>
